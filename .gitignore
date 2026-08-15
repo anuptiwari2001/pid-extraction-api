@@ -1,0 +1,67 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# VS IDE Project Files (lock files, cache)
+.vs/
+*.slnx
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Environment variables (local only)
+.env.local
+.env.*.local
+
+# Storage and model files
+storage/
+models_weights/
+*.pt
+*.pth
+*.pkl
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Logs
+*.log
+logs/
