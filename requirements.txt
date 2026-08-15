@@ -1,0 +1,52 @@
+# --- Core API ---
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+pydantic==2.9.2
+pydantic-settings==2.5.2
+python-multipart==0.0.9
+
+# --- Database ---
+sqlalchemy==2.0.35
+alembic==1.13.3         # schema migrations — see migrations/ and alembic.ini
+pyodbc==5.1.0          # MSSQL
+psycopg2-binary==2.9.9  # PostgreSQL
+pymysql==1.1.1          # MySQL
+pymongo==4.9.1           # MongoDB
+neo4j==5.24.0             # Neo4j
+
+# --- Async jobs ---
+celery==5.4.0
+redis==5.0.8
+
+# --- PDF / image processing ---
+pymupdf==1.24.10
+Pillow==10.4.0
+opencv-python-headless==4.10.0.84
+numpy==1.26.4
+
+# --- CV symbol detection (optional — only required if using a trained model) ---
+ultralytics==8.2.103   # YOLOv8
+# detectron2 is not pip-installable from PyPI; install per
+# https://detectron2.readthedocs.io/en/latest/tutorials/install.html if you
+# want the Detectron2SymbolDetector path instead of YOLO.
+
+# --- CV training data prep (optional — only required to run training/prepare_yolo_dataset.py) ---
+albumentations==2.0.8
+pyyaml==6.0.2
+
+# --- OCR / VLM text extraction ---
+easyocr==1.7.2
+pytesseract==0.3.13   # requires the tesseract-ocr system package too
+requests==2.32.3      # Ollama HTTP client (VLM_PROVIDER=ollama, the default — no API key needed)
+anthropic==0.36.0     # only used if VLM_PROVIDER=anthropic
+openai==1.51.0        # only used if VLM_PROVIDER=openai
+
+# --- GNN relationship refinement (optional — only required if USE_GNN=true,
+# or to run app/services/gnn/train_gnn.py) ---
+torch==2.4.1
+torch-geometric==2.6.0
+networkx==3.3   # graph_export.py — also used by infer_graph()'s output type
+
+# --- Testing ---
+pytest==8.3.3
+httpx==0.27.2
